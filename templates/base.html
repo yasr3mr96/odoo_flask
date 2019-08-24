@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odoo_flask</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <script src='{{ url_for("static", filename="js/jquery-3.2.1.min.js") }}'></script>
+    <script src='{{ url_for("static", filename="js/bootstrap.min.js") }}'></script>
+
+    <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+</head>
+<body>
+{% include 'include/_navbar.html' %}
+
+<div class="container">
+    {% include 'include/_messages.html' %}
+    {% block body %} {% endblock %}
+
+</div>
+
+
+<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+
+<script>
+        CKEDITOR.replace('editor');
+
+
+</script>
+
+
+</html>

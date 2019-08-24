@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1>Products</h1>
+	<ul class="list-group">
+		{% for product in data %}
+		
+		<li class="list-group-item">{{product['id']}}:{{product['name']}}</li>
+
+		{% endfor %}
+		
+	</ul>
+	
+{% endblock %}
